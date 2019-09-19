@@ -62,7 +62,7 @@ html {
     margin: 0 auto;
     display: flex;
     background: #fff;
-    border: black;
+    border: #0c0c0c;
    }
    .single-photo .figure {
     box-shadow: none;
@@ -150,7 +150,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black
+    color: #0c0c0c
    }
    .form {
     width: 360px;
