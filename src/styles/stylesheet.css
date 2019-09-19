@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -18,7 +18,7 @@ html {
     text-decoration: none;
    }
    h1 a {
-    color: 0c0c0c;
+    color: #0c0c0c;
     text-decoration: none;
    }
    h1 a:focus {
@@ -170,18 +170,20 @@ html {
     font-size: 14px;
     }
    .form button {
-    font-family: "Roboto", sans-serif;
+    font-family: sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     outline: 0;
-    background:#065784;
+    background:#0987cd;
     width: 100%;
     border: 0;
     padding: 15px;
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 16px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+    letter-spacing: 0.3rem;
     }
     .form button:hover,.form button:active,.form button:focus {
     background: #7B8589;
