@@ -1,17 +1,26 @@
-/* eslint-disable no-unused-labels */
 import React, { Component } from "react";
+import PhotoWall from "./PhotoWall";
+import AddPhoto from "./AddPhoto";
 import { Route, Link } from "react-router-dom";
-import PhotoWall from "./PhotoWall.js";
-import AddPhoto from "./AddPhoto.js";
-import Single from "./Single.js";
+import Single from "./Single";
 
 class Main extends Component {
+  state = { loading: true };
+
+  componentDidMount() {
+    this.props.startLoadingPost().then(() => {
+      this.setState({ loading: false });
+    });
+    this.props.startLoadingComments();
+  }
+
   render() {
     return (
       <div>
         <h1>
-          <Link to="/">PHOTOWALL</Link>
+          <Link to="/"> Photowall </Link>
         </h1>
+
         <Route
           exact
           path="/"
@@ -30,8 +39,11 @@ class Main extends Component {
         />
 
         <Route
+          exact
           path="/single/:id"
-          render={params => <Single {...this.props} {...params} />}
+          render={params => (
+            <Single loading={this.state.loading} {...this.props} {...params} />
+          )}
         />
       </div>
     );
